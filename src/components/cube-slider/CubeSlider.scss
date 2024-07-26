@@ -1,0 +1,112 @@
+.cube-slider {
+  --slider-width: 200px;
+  --distance: calc(var(--slider-width) / 2);
+  width: var(--slider-width);
+  height: var(--slider-width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: 8s infinite linear rotate-slider;
+
+  &-wrapper {
+    perspective: 1000px;
+  }
+
+  .slide {
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--main-color);
+    position: absolute;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  #front {
+    transform: translateZ(var(--distance));
+    animation: 2s 2s linear rotate-front-slide;
+  }
+
+  #back {
+    transform: translateZ(calc(var(--distance) * -1));
+    animation: 2s 2s linear rotate-back-slide;
+  }
+
+  #left {
+    left: calc(var(--distance) * -1);
+    transform: rotateY(-90deg);
+  }
+
+  #right {
+    right: calc(var(--distance) * -1);
+    transform: rotateY(90deg);
+  }
+
+  #top {
+    top: calc(var(--distance) * -1);
+    transform: rotateX(90deg);
+  }
+
+  #bottom {
+    bottom: calc(var(--distance) * -1);
+    transform: rotateX(-90deg);
+  }
+}
+
+@keyframes rotate-slider {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+
+  20% {
+    transform: rotateY(-135deg);
+  }
+
+  40% {
+    transform: rotateX(135deg) rotateY(0deg);
+  }
+
+  60% {
+    transform: rotateX(-135deg);
+  }
+
+  80% {
+    transform: rotateX(0deg) rotateY(135deg);
+  }
+
+  100% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+}
+
+@keyframes rotate-front-slide {
+  0% {
+    transform: translateZ((var(--distance))) rotateY(0deg);
+  }
+
+  50% {
+    transform: translateZ(calc(var(--distance) * 1.8)) rotateY(360deg);
+  }
+
+  100% {
+    transform: translateZ((var(--distance))) rotateY(0deg);
+  }
+}
+
+@keyframes rotate-back-slide {
+  0% {
+    transform: translateZ(calc(var(--distance) * -1)) rotateY(0deg);
+  }
+
+  50% {
+    transform: translateZ(calc(var(--distance) * 1.8 * -1)) rotateY(360deg);
+  }
+
+  100% {
+    transform: translateZ(calc(var(--distance) * -1)) rotateY(0deg);
+  }
+}

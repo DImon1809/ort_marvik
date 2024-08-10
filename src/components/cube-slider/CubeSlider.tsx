@@ -2,12 +2,12 @@ import React from "react";
 
 import "./CubeSlider.scss";
 
-import front from "../../assets/sliders/front.jpg";
-import back from "../../assets/sliders/back.jpg";
-import top from "../../assets/sliders/top.jpg";
-import bottom from "../../assets/sliders/bottom.jpg";
-import left from "../../assets/sliders/left.jpg";
-import right from "../../assets/sliders/right.jpg";
+import front from "../../assets/sliders/front.webp";
+import back from "../../assets/sliders/back.webp";
+import top from "../../assets/sliders/top.webp";
+import bottom from "../../assets/sliders/bottom.webp";
+import left from "../../assets/sliders/left.webp";
+import right from "../../assets/sliders/right.webp";
 
 const CubeSlider = () => {
   return (

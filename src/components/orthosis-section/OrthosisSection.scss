@@ -1,0 +1,309 @@
+.orthosis-section {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 80px;
+
+  @media (max-width: 500px) {
+    margin-bottom: 60px;
+  }
+
+  .about-orthosis-wrapper {
+    width: 100%;
+    margin-bottom: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+
+    @media (max-width: 1070px) {
+      gap: 60px;
+    }
+
+    @media (max-width: 900px) {
+      gap: 40px;
+    }
+
+    @media (max-width: 760px) {
+      flex-direction: column;
+    }
+
+    .about-orthosis-text {
+      width: 800px;
+      opacity: 0.5;
+      transform: translate(-30%, 30%);
+      transition: all 0.9s ease;
+
+      @media (max-width: 1270px) {
+        width: 600px;
+      }
+
+      @media (max-width: 1070px) {
+        width: 500px;
+      }
+
+      @media (max-width: 900px) {
+        width: 400px;
+      }
+
+      @media (max-width: 760px) {
+        padding: 30px;
+        background-color: #b0e9f6;
+        border-radius: 8px;
+        box-shadow: 0px 0px 0px 0.26px #000000;
+      }
+
+      @media (max-width: 500px) {
+        width: 300px;
+      }
+
+      @media (max-width: 390px) {
+        padding: 20px;
+      }
+
+      &.move {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+
+      p {
+        font-size: 16px;
+
+        @media (max-width: 1270px) {
+          font-size: 15px;
+        }
+
+        @media (max-width: 1070px) {
+          font-size: 14px;
+        }
+
+        @media (max-width: 760px) {
+          font-size: 13px;
+        }
+
+        @media (max-width: 660px) {
+          font-size: 12px;
+          font-weight: 500;
+        }
+
+        @media (max-width: 500px) {
+          font-size: 11px;
+        }
+      }
+    }
+
+    .orthosis-image-wrapper {
+      width: 320px;
+      height: 410px;
+
+      @media (max-width: 1070px) {
+        width: 280px;
+        height: 370px;
+      }
+
+      @media (max-width: 900px) {
+        width: 260px;
+        height: 350px;
+      }
+
+      @media (max-width: 660px) {
+        width: 240px;
+        height: 330px;
+      }
+
+      @media (max-width: 500px) {
+        width: 210px;
+        height: 300px;
+      }
+
+      @media (max-width: 490px) {
+        width: 190px;
+        height: 280px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .orthosis-points-wrapper {
+    width: 100%;
+    height: 240px;
+    padding: 50px 0;
+    background-color: #b0e9f6;
+
+    @media (max-width: 1070px) {
+      padding: 40px 0;
+    }
+
+    @media (max-width: 760px) {
+      padding: 10px 0;
+    }
+
+    @media (max-width: 660px) {
+      height: 200px;
+    }
+
+    @media (max-width: 500px) {
+      height: 180px;
+    }
+
+    .orthosis-points {
+      width: 700px;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+
+      @media (max-width: 760px) {
+        width: 460px;
+        height: 90%;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      @media (max-width: 660px) {
+        width: 420px;
+        height: 70%;
+      }
+
+      @media (max-width: 500px) {
+        width: 360px;
+      }
+
+      &-text {
+        p {
+          font-size: 16px;
+
+          @media (max-width: 1270px) {
+            font-size: 15px;
+          }
+
+          @media (max-width: 1070px) {
+            font-size: 14px;
+          }
+
+          @media (max-width: 760px) {
+            font-size: 13px;
+          }
+
+          @media (max-width: 660px) {
+            font-size: 12px;
+            font-weight: 500;
+          }
+
+          @media (max-width: 500px) {
+            font-size: 11px;
+          }
+        }
+      }
+
+      ul {
+        display: flex;
+        gap: 26px;
+
+        .point-wrapper {
+          width: 136px;
+          height: 136px;
+          list-style-type: none;
+          position: relative;
+
+          @media (max-width: 1070px) {
+            width: 116px;
+            height: 116px;
+          }
+
+          @media (max-width: 760px) {
+            width: 90px;
+            height: 90px;
+          }
+
+          @media (max-width: 660px) {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+          }
+
+          @media (max-width: 500px) {
+            width: 70px;
+            height: 70px;
+          }
+
+          @media (max-width: 430px) {
+            width: 60px;
+            height: 60px;
+          }
+
+          &-text {
+            text-align: center;
+
+            @media (max-width: 760px) {
+              width: 94px;
+            }
+
+            p {
+              font-size: 16px;
+
+              @media (max-width: 1270px) {
+                font-size: 15px;
+              }
+
+              @media (max-width: 1070px) {
+                font-size: 14px;
+              }
+
+              @media (max-width: 760px) {
+                font-size: 13px;
+              }
+
+              @media (max-width: 660px) {
+                font-size: 12px;
+                font-weight: 500;
+              }
+
+              @media (max-width: 500px) {
+                font-size: 11px;
+              }
+
+              @media (max-width: 430px) {
+                font-size: 10px;
+              }
+            }
+          }
+
+          &:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            top: -4px;
+            left: -4px;
+            border: 4px dotted var(--main-color);
+            animation: 20s infinite linear rotate-border;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes rotate-border {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

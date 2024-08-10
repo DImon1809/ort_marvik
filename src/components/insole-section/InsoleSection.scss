@@ -1,0 +1,252 @@
+.insole-section {
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 80px;
+
+  @media (max-width: 760px) {
+    margin-bottom: 60px;
+  }
+
+  .insole-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+
+    @media (max-width: 1370px) {
+      gap: 60px;
+    }
+
+    @media (max-width: 1270px) {
+      gap: 40px;
+    }
+
+    @media (max-width: 800px) {
+      gap: 20px;
+    }
+
+    @media (max-width: 760px) {
+      flex-direction: column;
+      gap: 60px;
+    }
+
+    @media (max-width: 500px) {
+      gap: 40px;
+    }
+
+    .insole-text {
+      width: 600px;
+      opacity: 0.5;
+      transform: translate(-30%, 30%);
+      transition: all 0.9s ease;
+
+      @media (max-width: 1270px) {
+        width: 500px;
+      }
+
+      @media (max-width: 1270px) {
+        width: 400px;
+      }
+
+      @media (max-width: 900px) {
+        width: 360px;
+      }
+
+      @media (max-width: 760px) {
+        width: 400px;
+        padding: 30px;
+        background-color: #b0e9f6;
+        border-radius: 8px;
+        box-shadow: 0px 0px 0px 0.26px #000000;
+      }
+
+      @media (max-width: 500px) {
+        width: 300px;
+        box-shadow: 0px 0px 0px 0.1px #000000;
+      }
+
+      @media (max-width: 390px) {
+        padding: 20px;
+      }
+
+      &.move {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+
+      p {
+        font-size: 16px;
+
+        @media (max-width: 1270px) {
+          font-size: 15px;
+        }
+
+        @media (max-width: 1070px) {
+          font-size: 14px;
+        }
+
+        @media (max-width: 760px) {
+          font-size: 13px;
+        }
+
+        @media (max-width: 660px) {
+          font-size: 12px;
+          font-weight: 500;
+        }
+
+        @media (max-width: 500px) {
+          font-size: 11px;
+        }
+      }
+    }
+
+    .insole-image {
+      width: 570px;
+      height: 300px;
+      opacity: 0.5;
+      transform: translate(30%, 30%);
+      transition: all 0.9s ease;
+
+      @media (max-width: 1270px) {
+        width: 440px;
+        height: 230px;
+      }
+
+      @media (max-width: 1070px) {
+        width: 380px;
+        height: 200px;
+      }
+
+      @media (max-width: 900px) {
+        width: 340px;
+        height: 190px;
+      }
+
+      @media (max-width: 760px) {
+        width: 380px;
+        height: 200px;
+      }
+
+      @media (max-width: 500px) {
+        width: 300px;
+        height: 160px;
+      }
+
+      &.move {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .plan-on-future-wrapper {
+    width: 100%;
+    height: 400px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+
+    @media (max-width: 1070px) {
+      gap: 30px;
+    }
+
+    @media (max-width: 760px) {
+      height: 300px;
+      margin-top: 40px;
+      gap: 0;
+    }
+
+    // @media (max-width: 660px) {
+    //   height: 300px;
+    // }
+
+    @media (max-width: 450px) {
+      height: 200px;
+      margin-top: 60px;
+    }
+
+    .plan-on-future-text {
+      opacity: 0.5;
+      transform: translate(-30%, 30%);
+      transition: all 0.9s ease;
+
+      @media (max-width: 760px) {
+        width: 200px;
+      }
+
+      @media (max-width: 560px) {
+        width: 150px;
+      }
+
+      @media (max-width: 450px) {
+        width: 130px;
+      }
+
+      &.move {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+
+      p {
+        font-size: 16px;
+
+        @media (max-width: 1270px) {
+          font-size: 15px;
+        }
+
+        @media (max-width: 1070px) {
+          font-size: 14px;
+        }
+
+        @media (max-width: 760px) {
+          font-size: 13px;
+        }
+
+        @media (max-width: 560px) {
+          font-size: 12px;
+        }
+
+        @media (max-width: 450px) {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+
+  .plan-on-future-image {
+    width: 409px;
+    height: 409px;
+
+    @media (max-width: 1070px) {
+      width: 350px;
+      height: 350px;
+    }
+
+    @media (max-width: 760px) {
+      width: 300px;
+      height: 300px;
+    }
+
+    @media (max-width: 560px) {
+      width: 260px;
+      height: 260px;
+    }
+
+    @media (max-width: 450px) {
+      width: 220px;
+      height: 220px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

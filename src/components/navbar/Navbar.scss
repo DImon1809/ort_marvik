@@ -3,8 +3,20 @@
   height: 60px;
   background-color: var(--main-color);
   position: fixed;
-  z-index: 6;
+  z-index: 8;
   top: 0;
+
+  @media (max-width: 900px) {
+    height: 54px;
+  }
+
+  @media (max-width: 660px) {
+    height: 48px;
+  }
+
+  @media (max-width: 500px) {
+    height: 42px;
+  }
 
   &-content-wrapper {
     width: 94%;
@@ -18,7 +30,30 @@
   .logo-wrapper {
     width: 52px;
     height: 44px;
-    cursor: pointer;
+
+    @media (max-width: 900px) {
+      width: 46px;
+      height: 38px;
+    }
+
+    @media (max-width: 660px) {
+      width: 36px;
+      height: 28px;
+    }
+
+    @media (max-width: 500px) {
+      width: 32px;
+      height: 24px;
+    }
+
+    a {
+      cursor: pointer;
+      text-decoration: none;
+
+      @media (max-width: 600px) {
+        cursor: default;
+      }
+    }
 
     img {
       width: 100%;
@@ -34,6 +69,24 @@
       width: 360px;
     }
 
+    @media (max-width: 1200px) {
+      width: 320px;
+    }
+
+    @media (max-width: 660px) {
+      width: 200px;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      right: 0;
+      background-color: var(--main-color);
+      z-index: 9;
+    }
+
+    @media (max-width: 500px) {
+      width: 160px;
+    }
+
     ul {
       width: 100%;
       height: 100%;
@@ -41,16 +94,159 @@
       align-items: center;
       justify-content: space-around;
 
+      @media (max-width: 660px) {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 120px;
+        gap: 30px;
+        justify-content: normal;
+      }
+
       .nav-item {
         list-style-type: none;
         font-family: "Roboto", sans-serif;
         font-size: 14px;
-        color: #fff;
-        cursor: pointer;
 
-        @media (max-width: 1700px) {
-          font-size: 12px;
+        a {
+          color: #fff;
+          cursor: pointer;
+          text-decoration: none;
+          transition: all 0.2s ease;
+
+          @media (hover: hover) {
+            &:hover {
+              // color: rgba(255, 0, 0, 0.5);
+              color: red;
+              filter: drop-shadow(1px 1px 1px red);
+            }
+          }
+
+          &:active {
+            // color: rgba(255, 0, 0, 0.5);
+            color: red;
+            filter: drop-shadow(1px 1px 1px red);
+          }
+
+          @media (max-width: 1700px) {
+            font-size: 12px;
+          }
+
+          @media (max-width: 900px) {
+            font-size: 11px;
+          }
+
+          @media (max-width: 660px) {
+            font-size: 12px;
+          }
+
+          @media (max-width: 600px) {
+            cursor: default;
+          }
+
+          @media (max-width: 500px) {
+            font-size: 11px;
+          }
         }
+      }
+    }
+  }
+
+  @media (max-width: 660px) {
+    .nav-item-wrapper {
+      transition: transform 0.3s ease;
+      transform: translateX(100%);
+
+      &.active {
+        transform: translateX(0%);
+      }
+    }
+  }
+
+  .burger {
+    display: none;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    z-index: 10;
+
+    @media (max-width: 660px) {
+      display: flex;
+      align-items: center;
+    }
+
+    @media (max-width: 600px) {
+      cursor: default;
+    }
+
+    @media (max-width: 660px) {
+      width: 26px;
+      height: 16px;
+    }
+
+    @media (max-width: 500px) {
+      width: 24px;
+      height: 14px;
+    }
+
+    .center-line {
+      width: 100%;
+      height: 3px;
+      border-radius: 2px;
+      display: block;
+      background-color: #fff;
+      transition: all 0.3s ease;
+
+      @media (max-width: 500px) {
+        height: 2.8px;
+      }
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      width: 100%;
+      height: 3px;
+      border-radius: 2px;
+      position: absolute;
+      background-color: #fff;
+      transition: all 0.3s ease;
+
+      @media (max-width: 500px) {
+        height: 2px;
+      }
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+  }
+
+  .burger.active {
+    .center-line {
+      scale: 0;
+    }
+
+    &::before {
+      transform: rotate(-45deg) translateX(-38%);
+
+      @media (max-width: 500px) {
+        transform: rotate(-45deg) translateX(-38%);
+      }
+    }
+
+    &::after {
+      transform: rotate(45deg) translateX(-35%);
+
+      @media (max-width: 500px) {
+        transform: rotate(45deg) translateX(-36%);
       }
     }
   }

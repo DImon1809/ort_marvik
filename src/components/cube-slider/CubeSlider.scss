@@ -8,7 +8,35 @@
   align-items: center;
   position: relative;
   transform-style: preserve-3d;
-  animation: 8s infinite linear rotate-slider;
+  animation: 12s infinite linear rotate-slider;
+
+  @media (max-width: 1270px) {
+    --slider-width: 180px;
+  }
+
+  @media (max-width: 1070px) {
+    --slider-width: 160px;
+  }
+
+  @media (max-width: 920px) {
+    --slider-width: 150px;
+  }
+
+  @media (max-width: 760px) {
+    --slider-width: 140px;
+  }
+
+  @media (max-width: 660px) {
+    --slider-width: 180px;
+  }
+
+  @media (max-width: 500px) {
+    --slider-width: 160px;
+  }
+
+  @media (max-width: 390px) {
+    --slider-width: 150px;
+  }
 
   &-wrapper {
     perspective: 1000px;
@@ -19,6 +47,7 @@
     height: 100%;
     border: 1px solid var(--main-color);
     position: absolute;
+    will-change: transform;
 
     img {
       width: 100%;

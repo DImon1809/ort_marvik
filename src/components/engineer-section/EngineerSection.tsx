@@ -2,9 +2,9 @@ import { FC, useEffect, useRef, useState } from "react";
 
 import "./EngineerSection.scss";
 
-import machine from "../../assets/machine.jpg";
-import machineLayout from "../../assets/machine-layout.jpg";
-import howOrthosis from "../../assets/how-orthosis.jpg";
+import machine from "../../assets/machine.webp";
+import machineLayout from "../../assets/machine-layout.webp";
+import howOrthosis from "../../assets/how-orthosis.webp";
 
 const EngineerSection: FC = () => {
   const enginerrRef = useRef<HTMLDivElement>(null);
@@ -38,41 +38,32 @@ const EngineerSection: FC = () => {
 
   return (
     <section className="engineer-section">
-      <div className="engineer-wrapper">
-        <div className="engineer" ref={enginerrRef}>
-          <div className="machine-nest">
-            <div
-              className={
-                moveEngineer ? "machine-wrapper move" : "machine-wrapper"
-              }
-            >
-              <img src={machine} alt="#" className="machine" />
-              <img src={machineLayout} alt="#" className="machine-layout" />
-            </div>
-          </div>
-          <div className="machine-text-nest">
-            <div
-              className={
-                moveEngineer
-                  ? "machine-text-wrapper move"
-                  : "machine-text-wrapper"
-              }
-            >
-              <p>
-                Инженерным составом компании был спроектирован и построен
-                лабораторный прототип специализированного 3Д принтера ОТМ М.
-              </p>
-              <p>
-                Он имеет ряд особенностей и несомненных преимуществ, по
-                сравнению с конкурентами: принтер имеет две печающие головки,
-                которые позволяют увеличить производительность, также нагрев
-                стола осуществляется посредством четырех независимы пластин,
-                температура каждой из которых может отдельно настраиваться с
-                помощью микроконтроллера. Принтер облатает повышенной плавностью
-                ходу и высокой точностью печати.
-              </p>
-            </div>
-          </div>
+      <div className="engineer-wrapper" ref={enginerrRef}>
+        <div
+          className={moveEngineer ? "machine-wrapper move" : "machine-wrapper"}
+        >
+          <img src={machine} alt="#" className="machine" />
+          <img src={machineLayout} alt="#" className="machine-layout" />
+        </div>
+
+        <div
+          className={
+            moveEngineer ? "machine-text-wrapper move" : "machine-text-wrapper"
+          }
+        >
+          <p>
+            Инженерным составом компании был спроектирован и построен
+            лабораторный прототип специализированного 3Д принтера ОТМ М.
+          </p>
+          <p>
+            Он имеет ряд особенностей и несомненных преимуществ, по сравнению с
+            конкурентами: принтер имеет две печающие головки, которые позволяют
+            увеличить производительность, также нагрев стола осуществляется
+            посредством четырех независимы пластин, температура каждой из
+            которых может отдельно настраиваться с помощью микроконтроллера.
+            Принтер облатает повышенной плавностью ходу и высокой точностью
+            печати.
+          </p>
         </div>
       </div>
       <div className="how-orthosis-wrapper">
@@ -84,7 +75,7 @@ const EngineerSection: FC = () => {
           >
             <p>А что насчет ортезов?</p>
           </div>
-          <div className="how-orthosis-image">
+          <div className="how-orthosis-image" id="about-orthosis">
             <img src={howOrthosis} alt="#" />
           </div>
         </div>

@@ -54,15 +54,20 @@ const BecomeAgreement: FC<IBecomeAgreement> = ({
   }, [isAuth]);
 
   useEffect(() => {
-    if (isSuccess)
-      dispatch(toggleAlert({ isAlert: true, aletText: "Заявка отправлена!" }));
-
-    if (isBid && !isSendedBid) {
+    if (isAuth && isBid) {
       return setIsSendedBid(true);
     }
 
     return setIsSendedBid(false);
-  }, [isBid]);
+  }, [isBid, isAuth]);
+
+  useEffect(() => {
+    if (!isError && isSuccess) {
+      dispatch(toggleAlert({ isAlert: true, aletText: "Заявка отправлена!" }));
+
+      return setIsSendedBid(true);
+    }
+  }, [isError, isSuccess]);
 
   return (
     <div className={`become-agreement ${directionName}`}>

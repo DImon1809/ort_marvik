@@ -29,7 +29,7 @@
     }
 
     @media (max-width: 500px) {
-      height: 240px;
+      height: 280px;
     }
 
     @media (max-width: 460px) {
@@ -73,6 +73,10 @@
       clip-path: none;
     }
 
+    @media (max-width: 660px) {
+      height: 36%;
+    }
+
     .introduction-text {
       width: 400px;
       position: absolute;
@@ -89,7 +93,7 @@
       }
 
       @media (max-width: 500px) {
-        width: 290px;
+        width: 340px;
       }
 
       div {
@@ -112,12 +116,12 @@
         }
 
         @media (max-width: 800px) {
-          font-size: 16px;
+          font-size: 17px;
         }
 
-        @media (max-width: 500px) {
-          font-size: 14px;
-        }
+        // @media (max-width: 500px) {
+        //   font-size: 17px;
+        // }
       }
 
       h3 {
@@ -131,9 +135,9 @@
           font-size: 14px;
         }
 
-        @media (max-width: 500px) {
-          font-size: 12px;
-        }
+        // @media (max-width: 500px) {
+        //   font-size: 12px;
+        // }
       }
 
       .p-1 {
@@ -156,6 +160,10 @@
       height: 70%;
     }
 
+    @media (max-width: 500px) {
+      height: 64%;
+    }
+
     img {
       width: 100%;
     }
@@ -167,8 +175,12 @@
     clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
 
     @media (max-width: 660px) {
-      clip-path: none;
       height: 70%;
+    }
+
+    @media (max-width: 500px) {
+      clip-path: none;
+      height: 64%;
     }
 
     img {
@@ -268,14 +280,14 @@
           font-size: 14px;
         }
 
-        @media (max-width: 760px) {
-          font-size: 13px;
-        }
+        // @media (max-width: 760px) {
+        //   font-size: 13px;
+        // }
 
-        @media (max-width: 500px) {
-          font-size: 12px;
-          font-weight: 500;
-        }
+        // @media (max-width: 500px) {
+        //   font-size: 12px;
+        //   font-weight: 500;
+        // }
 
         // @media (max-width: 500px) {
         //   font-size: 11px;
@@ -294,6 +306,7 @@
 
       @media (max-width: 1070px) {
         width: 160px;
+        height: 300px;
       }
 
       @media (max-width: 920px) {

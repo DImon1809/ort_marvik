@@ -22,7 +22,7 @@ const AlertWindow: FC = () => {
       setTimeout(() => {
         setIsVisible(false);
 
-        dispatch(toggleAlert({ isAlert: false }));
+        dispatch(toggleAlert({ isAlert: false, aletText: "Внимание!" }));
       }, 2000);
     }
   }, [isAlert]);

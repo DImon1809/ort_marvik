@@ -87,14 +87,14 @@
           font-size: 14px;
         }
 
-        @media (max-width: 760px) {
-          font-size: 13px;
-        }
+        // @media (max-width: 760px) {
+        //   font-size: 13px;
+        // }
 
-        @media (max-width: 500px) {
-          font-size: 12px;
-          font-weight: 500;
-        }
+        // @media (max-width: 500px) {
+        //   font-size: 12px;
+        //   font-weight: 500;
+        // }
 
         // @media (max-width: 500px) {
         //   font-size: 11px;
@@ -187,8 +187,8 @@
         width: 150px;
       }
 
-      @media (max-width: 450px) {
-        width: 130px;
+      @media (max-width: 500px) {
+        width: 120px;
       }
 
       &.move {
@@ -207,17 +207,17 @@
           font-size: 14px;
         }
 
-        @media (max-width: 760px) {
-          font-size: 13px;
-        }
+        // @media (max-width: 760px) {
+        //   font-size: 13px;
+        // }
 
-        @media (max-width: 560px) {
-          font-size: 12px;
-        }
+        // @media (max-width: 560px) {
+        //   font-size: 12px;
+        // }
 
-        @media (max-width: 450px) {
-          font-size: 11px;
-        }
+        // @media (max-width: 450px) {
+        //   font-size: 11px;
+        // }
       }
     }
   }

@@ -11,8 +11,16 @@
   align-items: center;
   gap: 10px;
 
+  @media (max-width: 900px) {
+    margin-top: 60px;
+  }
+
   @media (max-width: 760px) {
     padding: 20px 0 10px;
+  }
+
+  @media (max-width: 500px) {
+    gap: 14px;
   }
 
   // @media (max-width: 900px) {
@@ -54,13 +62,13 @@
         font-size: 14px;
       }
 
-      @media (max-width: 760px) {
-        font-size: 13px;
-      }
+      // @media (max-width: 760px) {
+      //   font-size: 13px;
+      // }
 
-      @media (max-width: 500px) {
-        font-size: 12px;
-      }
+      // @media (max-width: 500px) {
+      //   font-size: 12px;
+      // }
 
       // @media (max-width: 1270px) {
       //   font-size: 15px;
@@ -129,13 +137,13 @@
         font-size: 14px;
       }
 
-      @media (max-width: 760px) {
-        font-size: 13px;
-      }
+      // @media (max-width: 760px) {
+      //   font-size: 13px;
+      // }
 
-      @media (max-width: 500px) {
-        font-size: 12px;
-      }
+      // @media (max-width: 500px) {
+      //   font-size: 12px;
+      // }
 
       // @media (max-width: 1070px) {
       //   font-size: 12px;

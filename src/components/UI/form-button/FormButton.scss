@@ -11,10 +11,26 @@
   box-shadow: 0px 1px 3px black;
   transition: all 0.3s ease;
 
+  @media (max-width: 600px) {
+    cursor: default;
+  }
+
+  @media (max-width: 430px) {
+    width: 150px;
+    height: 34px;
+  }
+
   &:active {
     box-shadow: none;
     opacity: 0.5;
     transform: translateY(-5px);
+  }
+
+  &.blocked {
+    transform: none;
+    box-shadow: none;
+    opacity: 0.5;
+    cursor: default;
   }
 
   p {

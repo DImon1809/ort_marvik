@@ -41,14 +41,15 @@ const DeleteAccount: FC = () => {
   }, [isDelete]);
 
   useEffect(() => {
-    if (isSuccess) {
+    if (isSuccess && !isError) {
+      dispatch(toggleAlert({ isAlert: true, aletText: "Аккаунт удален!" }));
+
       localStorage.removeItem("token");
 
       dispatch(loguot());
-      dispatch(toggleAlert({ isAlert: true, aletText: "Аккаунт удален!" }));
     }
 
-    if (isError)
+    if (isError && !isSuccess)
       dispatch(
         toggleAlert({ isAlert: true, aletText: "Что-то пошло не так!" })
       );

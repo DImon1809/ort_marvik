@@ -60,6 +60,10 @@ const Navbar: FC = () => {
     dispatch(toggleAlertDelete(true));
   };
 
+  const handleScroll = (): void => {
+    isOpenMenu && dispatch(toggleGlobalWrapper(false));
+  };
+
   useEffect(() => {
     if (isAuth && (jwtToken || localStorage.getItem("token"))) {
       return setIsAuthenticated(true);
@@ -67,6 +71,12 @@ const Navbar: FC = () => {
 
     return setIsAuthenticated(false);
   }, [isAuth]);
+
+  useEffect(() => {
+    document.addEventListener("scroll", handleScroll);
+
+    return () => document.removeEventListener("scroll", handleScroll);
+  });
 
   return (
     <nav className="navbar">

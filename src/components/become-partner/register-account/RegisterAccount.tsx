@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from "react";
+import { FC, Dispatch, SetStateAction, useState, useEffect } from "react";
 
 import { useRegisterMutation } from "../../../store/services/endpoints/formApi";
 
@@ -14,14 +14,25 @@ import "./RegisterAccount.scss";
 
 import { IBecomeWrapper } from "../become-wrapper/BecomeWrapper";
 
-const RegisterAccount: FC<IBecomeWrapper> = ({
+export interface IRegisterAccount extends IBecomeWrapper {
+  setCurrentName: Dispatch<SetStateAction<string>>;
+  setCurrentEmail: Dispatch<SetStateAction<string>>;
+  setCurrentPas: Dispatch<SetStateAction<string>>;
+}
+
+const RegisterAccount: FC<IRegisterAccount> = ({
   slideMove,
+  setCurrentEmail,
+  setCurrentName,
+  setCurrentPas,
   changeSlideMove,
 }) => {
   const dispatch = useDispatch();
 
-  const [triggerRegister, { isError, isLoading, isSuccess, data, error }] =
-    useRegisterMutation();
+  const [
+    triggerRegister,
+    { isError, isLoading, isSuccess, data, error, status },
+  ] = useRegisterMutation();
 
   const [directionName, setDirectionName] = useState<string>("");
 
@@ -112,6 +123,8 @@ const RegisterAccount: FC<IBecomeWrapper> = ({
     if (slideMove === "agreement") return setDirectionName("");
 
     if (slideMove === "register") return setDirectionName("right");
+
+    if (slideMove === "confirm") return setDirectionName("left");
   }, [slideMove]);
 
   useEffect(() => {
@@ -131,12 +144,19 @@ const RegisterAccount: FC<IBecomeWrapper> = ({
     }
 
     if (isSuccess) {
+      setCurrentName(userName);
+      setCurrentEmail(email);
+      setCurrentPas(password);
       setUserName("");
       setEmail("");
       setPassword("");
       setRepeatPassword("");
+
+      dispatch(toggleAlert({ isAlert: true, aletText: "Проверьте почту!" }));
+
+      changeSlideMove("confirm");
     }
-  }, [data, isError, error, isSuccess]);
+  }, [data, isError, error, isSuccess, status]);
 
   return (
     <div className={`register-account ${directionName}`}>

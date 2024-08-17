@@ -9,6 +9,10 @@
   align-items: center;
   transition: transform 0.3s ease;
 
+  @media (max-width: 900px) {
+    gap: 30px;
+  }
+
   &.left {
     transform: translateX(-110%);
   }
@@ -23,6 +27,10 @@
     flex-direction: column;
     gap: 20px;
 
+    @media (max-width: 1070px) {
+      gap: 10px;
+    }
+
     div {
       width: 100%;
     }
@@ -32,6 +40,14 @@
 
       h3 {
         font-size: 18px;
+
+        @media (max-width: 1270px) {
+          font-size: 17px;
+        }
+
+        @media (max-width: 1070px) {
+          font-size: 16px;
+        }
       }
     }
 
@@ -39,6 +55,15 @@
     .agreement-paragraph {
       p {
         text-align: center;
+        font-size: 16px;
+
+        @media (max-width: 1270px) {
+          font-size: 15px;
+        }
+
+        @media (max-width: 1070px) {
+          font-size: 14px;
+        }
       }
 
       .to-register,
@@ -58,6 +83,16 @@
         margin: 5px auto;
         box-shadow: 0px 1px 3px black;
         transition: all 0.3s ease;
+
+        @media (max-width: 900px) {
+          width: 170px;
+          height: 28px;
+          font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+          cursor: default;
+        }
 
         &:active {
           transform: translateY(-5px);
@@ -85,9 +120,18 @@
     border-radius: 12px;
     opacity: 0.8;
 
+    @media (max-width: 900px) {
+      width: 220px;
+      height: 38px;
+    }
+
     p {
       color: #fff;
       font-size: 16px;
+
+      @media (max-width: 900px) {
+        font-size: 15px;
+      }
     }
   }
 
@@ -105,6 +149,15 @@
     transition: all 0.3s ease;
     animation: 2s infinite linear dance-button;
 
+    @media (max-width: 900px) {
+      width: 220px;
+      height: 38px;
+    }
+
+    @media (max-width: 600px) {
+      cursor: default;
+    }
+
     &:active {
       // animation: none;
       box-shadow: none;
@@ -120,6 +173,10 @@
       color: #fff;
       font-size: 16px;
       // animation: 3s infinite linear scale-button;
+
+      @media (max-width: 900px) {
+        font-size: 15px;
+      }
     }
   }
 }

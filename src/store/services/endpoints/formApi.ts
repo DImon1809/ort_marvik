@@ -25,6 +25,46 @@ export const formApi = serviceApi.injectEndpoints({
       }),
     }),
 
+    confirmCode: builder.mutation<
+      any,
+      {
+        userName: string;
+        email: string;
+        password: string;
+        code: string;
+      }
+    >({
+      query: (codeData) => ({
+        url: "/auth/code",
+        method: "post",
+        body: {
+          userName: codeData.userName,
+          email: codeData.email,
+          password: codeData.password,
+          code: codeData.code,
+        },
+      }),
+    }),
+
+    repeatCode: builder.mutation<
+      any,
+      {
+        userName: string;
+        email: string;
+        code: string;
+      }
+    >({
+      query: (codeData) => ({
+        url: "/auth/repeat",
+        method: "post",
+        body: {
+          email: codeData.email,
+
+          code: codeData.code,
+        },
+      }),
+    }),
+
     auth: builder.mutation<
       { accessToken: string },
       {
@@ -74,4 +114,6 @@ export const {
   useLazyCurrentQuery,
   useLazyLogoutQuery,
   useLazyDeleteUserQuery,
+  useConfirmCodeMutation,
+  useRepeatCodeMutation,
 } = formApi;

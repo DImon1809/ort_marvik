@@ -8,7 +8,7 @@ import machine from "../../assets/machine.webp";
 import machineLayout from "../../assets/machine-layout.webp";
 import howOrthosis from "../../assets/how-orthosis.webp";
 
-import machineWheel from "../../assets/machineWheel.png";
+import machineWheel from "../../assets/machineWheel.webp";
 
 const EngineerSection: FC = () => {
   const enginerrRef = useRef<HTMLDivElement>(null);

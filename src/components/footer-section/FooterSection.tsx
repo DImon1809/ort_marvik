@@ -7,6 +7,8 @@ import email from "../../assets/icons/email.webp";
 import vk from "../../assets/icons/vk.webp";
 import author from "../../assets/icons/author.webp";
 
+import fondM from "../../assets/fond-m.webp";
+
 const FooterSection: FC = () => {
   return (
     <footer className="footer-section">
@@ -41,8 +43,14 @@ const FooterSection: FC = () => {
           </li>
         </ul>
       </div>
+
       <div className="fond-m-wrapper">
-        <p>Создано при поддерwebp фонда содействия инновациям </p>
+        <div className="fond-m-image">
+          <img src={fondM} alt="#" />
+        </div>
+        <div className="fond-m-text">
+          <p>Создано при поддержке фонда содействия инновациям </p>
+        </div>
       </div>
     </footer>
   );

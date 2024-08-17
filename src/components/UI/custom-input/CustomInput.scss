@@ -1,0 +1,38 @@
+.custom-input-wrapper {
+  width: 92%;
+  position: relative;
+
+  .custom-input {
+    width: 92%;
+    padding-right: 30px;
+    height: 22px;
+    background-color: transparent;
+    outline: 0;
+    border: none;
+    border-bottom: 2px solid #5f9ea0;
+
+    &.no-valid {
+      border-bottom: 2px solid red;
+    }
+
+    &:focus ~ label,
+    &:not(:placeholder-shown) ~ label {
+      top: -80%;
+    }
+  }
+
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 15px;
+    transition: all 0.3s ease;
+  }
+
+  .eye-wrapper {
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    cursor: pointer;
+  }
+}

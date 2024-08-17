@@ -1,0 +1,142 @@
+.delete-account {
+  font-family: "Montserrat", sans-serif;
+  width: 400px;
+  height: 140px;
+  background-color: var(--main-color);
+  border-radius: 14px;
+  position: fixed;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 12;
+  scale: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  box-shadow: 0px 1px 3px black;
+  transition: scale 0.3s ease;
+
+  @media (max-width: 1070px) {
+    width: 360px;
+    height: 120px;
+    gap: 26px;
+  }
+
+  @media (max-width: 760px) {
+    width: 320px;
+    gap: 16px;
+  }
+
+  &.visible {
+    scale: 1;
+  }
+
+  p {
+    font-size: 16px;
+    font-weight: 500;
+
+    @media (max-width: 1270px) {
+      font-size: 15px;
+    }
+
+    @media (max-width: 1070px) {
+      font-size: 14px;
+    }
+
+    @media (max-width: 760px) {
+      font-size: 13px;
+    }
+  }
+
+  .cross-wrapper {
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    transform: rotate(45deg);
+    opacity: 1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    @media (max-width: 1070px) {
+      width: 19px;
+      height: 19px;
+    }
+
+    @media (max-width: 760px) {
+      width: 17px;
+      height: 17px;
+    }
+
+    @media (max-width: 600px) {
+      cursor: default;
+    }
+
+    &:active {
+      top: 4px;
+      opacity: 0.5;
+    }
+
+    span {
+      display: block;
+      width: 100%;
+      height: 4px;
+      border-radius: 4px;
+      background-color: #000;
+      position: absolute;
+    }
+
+    .left-cross-part {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .right-cross-part {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+
+  .delete-button {
+    width: 160px;
+    height: 36px;
+    border-radius: 12px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 1px 3px black;
+    opacity: 1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    @media (max-width: 760px) {
+      width: 140px;
+      height: 30px;
+    }
+
+    @media (max-width: 600px) {
+      cursor: default;
+    }
+
+    &:active {
+      opacity: 0.5;
+      transform: translateY(-5px);
+      box-shadow: none;
+    }
+
+    p {
+      font-family: "Roboto", sans-serif;
+      font-size: 15px;
+      color: #fff;
+
+      @media (max-width: 760px) {
+        font-size: 13px;
+      }
+    }
+  }
+}

@@ -1,0 +1,139 @@
+.user-section {
+  width: 200px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  // left: 140px;
+  left: 7%;
+  gap: 10px;
+
+  @media (max-width: 1700px) {
+    left: 8%;
+  }
+
+  @media (max-width: 1270px) {
+    left: 9%;
+  }
+
+  @media (max-width: 1070px) {
+    left: 10%;
+  }
+
+  @media (max-width: 830px) {
+    left: 11%;
+  }
+
+  @media (max-width: 720px) {
+    left: 12%;
+  }
+
+  @media (max-width: 660px) {
+    gap: 6px;
+  }
+
+  @media (max-width: 500px) {
+    left: 14%;
+  }
+
+  .user-loading {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 4px dotted #fff;
+    margin: 0 auto;
+    animation: 2s infinite linear rotate-loading;
+
+    @media (max-width: 1070px) {
+      width: 21px;
+      height: 21px;
+    }
+
+    @media (max-width: 900px) {
+      width: 17px;
+      height: 17px;
+    }
+
+    @media (max-width: 660px) {
+      width: 14px;
+      height: 14px;
+    }
+
+    @media (max-width: 500px) {
+      width: 12px;
+      height: 12px;
+      border: 2px dotted #fff;
+    }
+  }
+
+  .user-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    scale: 0;
+    transition: scale 0.3s ease;
+
+    @media (max-width: 1700px) {
+      width: 36px;
+      height: 36px;
+    }
+
+    @media (max-width: 900px) {
+      width: 30px;
+      height: 30px;
+    }
+
+    @media (max-width: 660px) {
+      width: 24px;
+      height: 24px;
+    }
+
+    &.visible {
+      scale: 1;
+    }
+  }
+
+  .user-name-wrapper {
+    width: 150px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    &.long {
+      overflow-x: scroll;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 600;
+      font-family: "Montserrat", sans-serif;
+
+      @media (max-width: 1700px) {
+        font-size: 15px;
+      }
+
+      @media (max-width: 900px) {
+        font-size: 14px;
+      }
+
+      @media (max-width: 660px) {
+        font-size: 13px;
+      }
+
+      @media (max-width: 500px) {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@keyframes rotate-loading {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

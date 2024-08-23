@@ -2,11 +2,10 @@ import { FC, useEffect, useState } from "react";
 
 import "./ConfirmCode.scss";
 
-import CustomInput from "../../UI/custom-input/CustomInput";
 import FormButton from "../../UI/form-button/FormButton";
 
 import { toggleAlert } from "../../../store/features/alertSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import { useRepeatCodeMutation } from "../../../store/services/endpoints/formApi";
 import { useConfirmCodeMutation } from "../../../store/services/endpoints/formApi";

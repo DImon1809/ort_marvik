@@ -58,7 +58,7 @@ export const formApi = serviceApi.injectEndpoints({
         url: "/auth/repeat",
         method: "post",
         body: {
-          userName: codeData.userName, 
+          userName: codeData.userName,
           email: codeData.email,
           code: codeData.code,
         },

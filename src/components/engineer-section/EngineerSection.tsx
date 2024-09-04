@@ -10,6 +10,8 @@ import howOrthosis from "../../assets/how-orthosis.webp";
 
 import machineWheel from "../../assets/machineWheel.webp";
 
+import presentation from "../../assets/presentations/3D_printer_OTM_M.pptx";
+
 const EngineerSection: FC = () => {
   const enginerrRef = useRef<HTMLDivElement>(null);
   const howOrthosisRef = useRef<HTMLDivElement>(null);
@@ -55,8 +57,17 @@ const EngineerSection: FC = () => {
         <div
           className={moveEngineer ? "machine-wrapper move" : "machine-wrapper"}
         >
-          <img src={machine} alt="#" className="machine" />
-          <img src={machineLayout} alt="#" className="machine-layout" />
+          {/* <div className="machine-images"> */}
+
+          <img src={machine} alt="#" className="machine" loading="lazy" />
+          <img
+            src={machineLayout}
+            alt="#"
+            className="machine-layout"
+            loading="lazy"
+          />
+
+          {/* </div> */}
           <div className="open-specification-wrapper">
             <p>Параметры</p>
             <div
@@ -79,11 +90,11 @@ const EngineerSection: FC = () => {
             <PrinterTable />
           ) : (
             <>
-              <p>
+              {/* <p>
                 Инженерным составом компании был спроектирован и построен
                 лабораторный прототип специализированного 3Д принтера ОТМ М.
-              </p>
-              <p>
+              </p> */}
+              {/* <p>
                 Он имеет ряд особенностей и несомненных преимуществ, по
                 сравнению с конкурентами. Конструкция предусматривает две
                 печающие головки, которые позволяют увеличить производительность
@@ -91,6 +102,17 @@ const EngineerSection: FC = () => {
                 пластинами, температура каждой из которых может отдельно
                 настраиваться. Изделие обладает повышенной плавностью хода и
                 высокой точностью печати.
+              </p> */}
+
+              <p>
+                Научно–техническим составом был спроектирован и построен
+                лабораторный прототип специализированного 3Д принтера ОТМ М. 3D
+                принтер ОТМ М представляет из себя не просто 3D принтер, а целый
+                производственный центр работающий по классической FDM технологии
+                так и по разрабатываемой гибридной технологии 3D печати.{" "}
+                <a href={presentation} download="presentation_OTM.pptx">
+                  Презентация.
+                </a>
               </p>
             </>
           )}

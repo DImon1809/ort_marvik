@@ -53,9 +53,25 @@ const OrthosisSection: FC = () => {
       <div className="orthosis-points-wrapper">
         <div className="orthosis-points">
           <div className="orthosis-points-text">
-            <p>Фиттинг ортеза состоит из четырех этапов </p>
+            {/* <p>Фиттинг ортеза состоит из четырех этапов </p> */}
+            <p>Мы можем предложить:</p>
           </div>
           <ul>
+            <li>
+              3D печать как целых, так и отдельных частей ортезов и
+              ортопедических стелек
+            </li>
+            <li>3D печать выплавляемых моделей</li>
+            <li>
+              3D печать макетов как общего назначения, так и для медицинских
+              научно образовательных нужд
+            </li>
+            <li>3D печать прочих наукоёмких изделий</li>
+            <li>Специализированный 3D принтер ОТМ М</li>
+
+            <li>НИР и ОКР</li>
+          </ul>
+          {/* <ul>
             <li className="point-wrapper">
               <img src={pointOne} alt="#" />
 
@@ -84,7 +100,7 @@ const OrthosisSection: FC = () => {
                 <p>4. Наложение ортеза</p>
               </div>
             </li>
-          </ul>
+          </ul> */}
         </div>
       </div>
     </section>

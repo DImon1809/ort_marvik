@@ -16,12 +16,20 @@
 
   .introduction-wrapper {
     width: 100%;
-    height: 500px;
+    height: 600px;
     display: flex;
     position: relative;
 
+    @media (max-width: 2000px) {
+      height: 500px;
+    }
+
     @media (max-width: 1100px) {
       height: 400px;
+    }
+
+    @media (max-width: 900px) {
+      height: 350px;
     }
 
     @media (max-width: 800px) {
@@ -175,11 +183,11 @@
     clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
 
     @media (max-width: 660px) {
+      clip-path: none;
       height: 70%;
     }
 
     @media (max-width: 500px) {
-      clip-path: none;
       height: 64%;
     }
 

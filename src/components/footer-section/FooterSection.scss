@@ -23,33 +23,8 @@
     gap: 14px;
   }
 
-  // @media (max-width: 900px) {
-  //   justify-content: flex-start;
-  // }
-
-  // @media (max-width: 760px) {
-  //   padding: 20px 0;
-  // }
-
   .footer-contacts {
     width: 280px;
-
-    // @media (max-width: 1270px) {
-    //   width: 260px;
-    // }
-
-    // @media (max-width: 1070px) {
-    //   width: 240px;
-    // }
-
-    // @media (max-width: 900px) {
-    //   margin-left: 20px;
-    // }
-
-    // @media (max-width: 500px) {
-    //   margin-left: 10px;
-    //   margin-bottom: 10px;
-    // }
 
     p {
       font-size: 16px;
@@ -61,35 +36,6 @@
       @media (max-width: 1070px) {
         font-size: 14px;
       }
-
-      // @media (max-width: 760px) {
-      //   font-size: 13px;
-      // }
-
-      // @media (max-width: 500px) {
-      //   font-size: 12px;
-      // }
-
-      // @media (max-width: 1270px) {
-      //   font-size: 15px;
-      // }
-
-      // @media (max-width: 1070px) {
-      //   font-size: 14px;
-      // }
-
-      // @media (max-width: 760px) {
-      //   font-size: 13px;
-      // }
-
-      // @media (max-width: 660px) {
-      //   font-size: 12px;
-      //   font-weight: 500;
-      // }
-
-      // @media (max-width: 500px) {
-      //   font-size: 11px;
-      // }
     }
 
     ul {
@@ -118,13 +64,18 @@
   }
 
   .fond-m-wrapper {
-    // position: absolute;
-    // right: 10px;
-    // bottom: 10px;
     display: flex;
-    gap: 10px;
+    gap: 30px;
     align-items: center;
     margin: 0 auto;
+
+    @media (max-width: 800px) {
+      gap: 24px;
+    }
+
+    @media (max-width: 500px) {
+      gap: 14px;
+    }
 
     p {
       font-size: 16px;
@@ -136,27 +87,6 @@
       @media (max-width: 1070px) {
         font-size: 14px;
       }
-
-      // @media (max-width: 760px) {
-      //   font-size: 13px;
-      // }
-
-      // @media (max-width: 500px) {
-      //   font-size: 12px;
-      // }
-
-      // @media (max-width: 1070px) {
-      //   font-size: 12px;
-      //   font-weight: 500;
-      // }
-
-      // @media (max-width: 660px) {
-      //   font-size: 11px;
-      // }
-
-      // @media (max-width: 500px) {
-      //   font-size: 10px;
-      // }
     }
 
     .fond-m-image {

@@ -1,17 +1,13 @@
-import { FC, Dispatch, SetStateAction, useState, useEffect } from "react";
-
-import { useRegisterMutation } from "../../../store/services/endpoints/formApi";
-
-import { useDispatch } from "react-redux";
-import { toggleAlert } from "../../../store/features/alertSlice";
-
-import { handleError } from "../../../errorTypeGuard";
-
-import CustomInput from "../../UI/custom-input/CustomInput";
-import FormButton from "../../UI/form-button/FormButton";
-
 import "./RegisterAccount.scss";
 
+import { Dispatch, FC, SetStateAction, useEffect,useState } from "react";
+import { useDispatch } from "react-redux";
+
+import { handleError } from "../../../errorTypeGuard";
+import { toggleAlert } from "../../../store/features/alertSlice";
+import { useRegisterMutation } from "../../../store/services/endpoints/formApi";
+import CustomInput from "../../UI/custom-input/CustomInput";
+import FormButton from "../../UI/form-button/FormButton";
 import { IBecomeWrapper } from "../become-wrapper/BecomeWrapper";
 
 export interface IRegisterAccount extends IBecomeWrapper {

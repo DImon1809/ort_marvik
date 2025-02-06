@@ -1,6 +1,6 @@
-import { FC, useState, useEffect, useRef } from "react";
-
 import "./FutureSection.scss";
+
+import { FC, useEffect, useRef,useState } from "react";
 
 import seeFuture from "../../assets/see-future.webp";
 

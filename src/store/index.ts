@@ -1,12 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import { menuSliceReducer } from "./features/menuSlice";
 import { alertSliceReducer } from "./features/alertSlice";
+import { menuSliceReducer } from "./features/menuSlice";
 import { userSliceReducer } from "./features/userSlice";
-
-import { serviceApi } from "./services/servicesApi";
-
 import { authMiddleware } from "./middlewares/authMiddleware";
+import { serviceApi } from "./services/servicesApi";
 
 export const store = configureStore({
   reducer: {
@@ -16,11 +14,8 @@ export const store = configureStore({
     userSlice: userSliceReducer,
   },
 
-  middleware: (defaultMiddleware) =>
-    defaultMiddleware().concat(
-      serviceApi.middleware,
-      authMiddleware.middleware
-    ),
+  middleware: defaultMiddleware =>
+    defaultMiddleware().concat(serviceApi.middleware, authMiddleware.middleware),
 });
 
 export type RootType = ReturnType<typeof store.getState>;

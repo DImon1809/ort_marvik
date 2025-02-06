@@ -1,11 +1,10 @@
-import { FC, useState, useEffect } from "react";
-
-import { useSelector } from "react-redux";
-import { RootType } from "../../store";
-
-import { useLazyCurrentQuery } from "../../store/services/endpoints/formApi";
-
 import "./UserSection.scss";
+
+import { FC, useEffect,useState } from "react";
+import { useSelector } from "react-redux";
+
+import { RootType } from "../../store";
+import { useLazyCurrentQuery } from "../../store/services/endpoints/formApi";
 
 const UserSection: FC = () => {
   const { jwtToken, userName, isAuth } = useSelector(

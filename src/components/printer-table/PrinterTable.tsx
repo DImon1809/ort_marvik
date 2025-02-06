@@ -1,6 +1,6 @@
-import { FC } from "react";
-
 import "./PrinterTable.scss";
+
+import { FC } from "react";
 
 const printerTableData = [
   { field: "Метод печати", value: "FDM/гибридый" },

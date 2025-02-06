@@ -1,9 +1,8 @@
-import { FC, useEffect, useState, useRef } from "react";
-
 import "./OrthosisSection.scss";
 
-import orthosis from "../../assets/orthosis.webp";
+import { FC, useEffect, useRef,useState } from "react";
 
+import orthosis from "../../assets/orthosis.webp";
 import pointOne from "../../assets/path-points/point-1.webp";
 import pointTwo from "../../assets/path-points/point-2.webp";
 import pointThree from "../../assets/path-points/point-3.webp";

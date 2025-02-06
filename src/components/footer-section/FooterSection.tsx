@@ -1,13 +1,12 @@
-import { FC } from "react";
-
 import "./FooterSection.scss";
 
-import telephone from "../../assets/icons/telephone.webp";
-import email from "../../assets/icons/email.webp";
-import vk from "../../assets/icons/vk.webp";
-import author from "../../assets/icons/author.webp";
+import { FC } from "react";
 
 import fondM from "../../assets/fond-m.webp";
+import author from "../../assets/icons/author.webp";
+import email from "../../assets/icons/email.webp";
+import telephone from "../../assets/icons/telephone.webp";
+import vk from "../../assets/icons/vk.webp";
 
 const FooterSection: FC = () => {
   return (

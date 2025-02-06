@@ -1,6 +1,5 @@
-import { serviceApi } from "../servicesApi";
-
 import { IUser } from "../../types";
+import { serviceApi } from "../servicesApi";
 
 export const formApi = serviceApi.injectEndpoints({
   endpoints: (builder) => ({

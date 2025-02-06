@@ -1,18 +1,16 @@
-import { FC, useState, useEffect } from "react";
+import "./DeleteAccount.scss";
+
+import { FC, useEffect,useState } from "react";
+import { useDispatch,useSelector } from "react-redux";
 
 import { RootType } from "../../store";
-import { useSelector, useDispatch } from "react-redux";
 import {
-  toggleAlertDelete,
   toggleAlert,
+  toggleAlertDelete,
 } from "../../store/features/alertSlice";
 import { toggleGlobalWrapper } from "../../store/features/menuSlice";
-
 import { loguot } from "../../store/features/userSlice";
-
 import { useLazyDeleteUserQuery } from "../../store/services/endpoints/formApi";
-
-import "./DeleteAccount.scss";
 
 const DeleteAccount: FC = () => {
   const dispatch = useDispatch();

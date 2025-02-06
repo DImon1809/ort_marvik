@@ -1,4 +1,4 @@
-import { fetchBaseQuery, createApi, retry } from "@reduxjs/toolkit/query/react";
+import { createApi, fetchBaseQuery, retry } from "@reduxjs/toolkit/query/react";
 
 import { RootType } from "..";
 

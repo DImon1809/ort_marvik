@@ -1,11 +1,10 @@
-import { FC, useEffect, useRef, useState } from "react";
-
-import CubeSlider from "../cube-slider/CubeSlider";
-
 import "./MainSection.scss";
+
+import { FC, useEffect, useRef, useState } from "react";
 
 import mainPosterLeft from "../../assets/main-poster-left.webp";
 import mainPosterRight from "../../assets/main-poster-right.webp";
+import CubeSlider from "../cube-slider/CubeSlider";
 
 const MainSection: FC = () => {
   const introTextRef = useRef<HTMLDivElement>(null);

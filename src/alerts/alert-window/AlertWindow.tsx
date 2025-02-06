@@ -1,10 +1,10 @@
+import "./AlertWindow.scss";
+
 import { FC, useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 import { RootType } from "../../store";
-import { useDispatch, useSelector } from "react-redux";
 import { toggleAlert } from "../../store/features/alertSlice";
-
-import "./AlertWindow.scss";
 
 const AlertWindow: FC = () => {
   const dispatch = useDispatch();

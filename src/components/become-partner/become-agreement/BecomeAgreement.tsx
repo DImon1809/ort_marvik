@@ -1,11 +1,11 @@
-import { FC, useEffect, useState } from "react";
+import "./BecomeAgreement.scss";
 
-import { useLazyAddBidQuery } from "../../../store/services/endpoints/ligikApi";
-import { useSelector, useDispatch } from "react-redux";
+import { FC, useEffect, useState } from "react";
+import { useDispatch,useSelector } from "react-redux";
+
 import { RootType } from "../../../store";
 import { toggleAlert } from "../../../store/features/alertSlice";
-
-import "./BecomeAgreement.scss";
+import { useLazyAddBidQuery } from "../../../store/services/endpoints/ligikApi";
 
 export interface IBecomeAgreement {
   slideMove: string;

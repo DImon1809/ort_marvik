@@ -1,9 +1,8 @@
-import { FC } from "react";
+import "./CustomInput.scss";
 
+import { FC } from "react";
 import { FiEye } from "react-icons/fi";
 import { FiEyeOff } from "react-icons/fi";
-
-import "./CustomInput.scss";
 
 export interface ICustomInput {
   inputType: string;

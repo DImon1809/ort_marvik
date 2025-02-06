@@ -1,18 +1,15 @@
-import { FC, MouseEvent, useEffect, useState } from "react";
-
-import { useDispatch, useSelector } from "react-redux";
-import { toggleGlobalWrapper } from "../../store/features/menuSlice";
-import { toggleAlertDelete } from "../../store/features/alertSlice";
-import { RootType } from "../../store";
-import { loguot } from "../../store/features/userSlice";
-
-import { useLazyLogoutQuery } from "../../store/services/endpoints/formApi";
-
-import UserSection from "../user-section/UserSection";
-
 import "./Navbar.scss";
 
+import { FC, MouseEvent, useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
 import logo from "../../assets/logo.webp";
+import { RootType } from "../../store";
+import { toggleAlertDelete } from "../../store/features/alertSlice";
+import { toggleGlobalWrapper } from "../../store/features/menuSlice";
+import { loguot } from "../../store/features/userSlice";
+import { useLazyLogoutQuery } from "../../store/services/endpoints/formApi";
+import UserSection from "../user-section/UserSection";
 
 const Navbar: FC = () => {
   const dispatch = useDispatch();

@@ -1,9 +1,8 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+
 import { formApi } from "../services/endpoints/formApi";
 import { ligikApi } from "../services/endpoints/ligikApi";
-
 import { IUser } from "../types";
-
 export interface IinitialState {
   userName: string;
   email: string;
@@ -27,14 +26,14 @@ export const userSlice = createSlice({
     loguot: () => initialState,
   },
 
-  extraReducers: (builder) => {
+  extraReducers: builder => {
     builder
       .addMatcher(
         formApi.endpoints.auth.matchFulfilled,
         (state, action: PayloadAction<{ accessToken: string }>) => {
           state.isAuth = true;
           state.jwtToken = action.payload.accessToken;
-        }
+        },
       )
       .addMatcher(
         formApi.endpoints.current.matchFulfilled,
@@ -43,9 +42,9 @@ export const userSlice = createSlice({
           state.userName = action.payload.userName;
           state.email = action.payload.email;
           state.isBid = action.payload.isBid;
-        }
+        },
       )
-      .addMatcher(ligikApi.endpoints.addBid.matchFulfilled, (state) => {
+      .addMatcher(ligikApi.endpoints.addBid.matchFulfilled, state => {
         state.isBid = true;
       });
   },

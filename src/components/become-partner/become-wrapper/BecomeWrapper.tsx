@@ -1,11 +1,11 @@
+import "./BecomeWrapper.scss";
+
 import { FC, useState } from "react";
 
-import BecomeAgreement from "../become-agreement/BecomeAgreement";
 import AuthAccount from "../auth-account/AuthAccount";
-import RegisterAccount from "../register-account/RegisterAccount";
+import BecomeAgreement from "../become-agreement/BecomeAgreement";
 import ConfirmCode from "../confirm-code/ConfirmCode";
-
-import "./BecomeWrapper.scss";
+import RegisterAccount from "../register-account/RegisterAccount";
 
 export interface IBecomeWrapper {
   slideMove: string;

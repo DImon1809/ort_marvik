@@ -1,14 +1,12 @@
-import { FC, useEffect, useState } from "react";
-
 import "./ConfirmCode.scss";
 
-import FormButton from "../../UI/form-button/FormButton";
-
-import { toggleAlert } from "../../../store/features/alertSlice";
+import { FC, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
+import { toggleAlert } from "../../../store/features/alertSlice";
 import { useRepeatCodeMutation } from "../../../store/services/endpoints/formApi";
 import { useConfirmCodeMutation } from "../../../store/services/endpoints/formApi";
+import FormButton from "../../UI/form-button/FormButton";
 
 export interface IConfirmCode {
   slideMove: string;

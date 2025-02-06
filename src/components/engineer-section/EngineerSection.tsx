@@ -1,16 +1,13 @@
-import { FC, useEffect, useRef, useState } from "react";
-
-import PrinterTable from "../printer-table/PrinterTable";
-
 import "./EngineerSection.scss";
 
+import { FC, useEffect, useRef, useState } from "react";
+
+import howOrthosis from "../../assets/how-orthosis.webp";
 import machine from "../../assets/machine.webp";
 import machineLayout from "../../assets/machine-layout.webp";
-import howOrthosis from "../../assets/how-orthosis.webp";
-
 import machineWheel from "../../assets/machineWheel.webp";
-
 import presentation from "../../assets/presentations/3D_printer_OTM_M.pptx";
+import PrinterTable from "../printer-table/PrinterTable";
 
 const EngineerSection: FC = () => {
   const enginerrRef = useRef<HTMLDivElement>(null);

@@ -1,10 +1,9 @@
-import { FC, useState, useRef, useEffect } from "react";
-
 import "./InsoleSection.scss";
 
-import insole from "../../assets/insole.webp";
+import { FC, useEffect,useRef, useState } from "react";
 
 import planFuture from "../../assets/future.webp";
+import insole from "../../assets/insole.webp";
 
 const InsoleSection: FC = () => {
   const insoleRef = useRef<HTMLDivElement>(null);

@@ -1,13 +1,13 @@
+import "./FormButton.scss";
+
 import {
-  FC,
   Dispatch,
-  SetStateAction,
+  FC,
   MouseEvent,
+  SetStateAction,
   useEffect,
   useState,
 } from "react";
-
-import "./FormButton.scss";
 
 export interface IFormButton {
   textButton: string;

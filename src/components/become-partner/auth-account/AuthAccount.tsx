@@ -1,16 +1,13 @@
-import { FC, useEffect, useState } from "react";
-
-import { useAuthMutation } from "../../../store/services/endpoints/formApi";
-import { useDispatch } from "react-redux";
-import { toggleAlert } from "../../../store/features/alertSlice";
-
-import { handleError } from "../../../errorTypeGuard";
-
-import CustomInput from "../../UI/custom-input/CustomInput";
-import FormButton from "../../UI/form-button/FormButton";
-
 import "./AuthAccount.scss";
 
+import { FC, useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+
+import { handleError } from "../../../errorTypeGuard";
+import { toggleAlert } from "../../../store/features/alertSlice";
+import { useAuthMutation } from "../../../store/services/endpoints/formApi";
+import CustomInput from "../../UI/custom-input/CustomInput";
+import FormButton from "../../UI/form-button/FormButton";
 import { IBecomeWrapper } from "../become-wrapper/BecomeWrapper";
 
 const AuthAccount: FC<IBecomeWrapper> = ({ slideMove, changeSlideMove }) => {
